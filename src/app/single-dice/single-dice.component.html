@@ -1,0 +1,8 @@
+<a href="" (click)="_click(); $event.preventDefault();" class="btn border rounded" [ngClass]="{'btn-dark': dice.selected, 'btn-light': !dice.selected}"
+  style="height: 50px; width: 50px;">
+  <div class=" d-flex h-100 w-100">
+    <div class="justify-content-center align-self-center mx-auto ">
+      {{dice.value}}
+    </div>
+  </div>
+</a>
