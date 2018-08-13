@@ -1,0 +1,5 @@
+{{spot.value}}
+
+<button [disabled]="spot.taken" (click)="_select()" class="btn btn-sm btn-light text-muted" *ngIf="showingPossibleValues && !spot.taken">
+  {{spot.possibleValue}}
+</button>

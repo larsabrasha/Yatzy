@@ -3,69 +3,53 @@ export class Dice {
   selected: boolean;
 }
 
-export class AppStateModel {
-  ones: number;
-  twos: number;
-  threes: number;
-  fours: number;
-  fives: number;
-  sixes: number;
+export class Spot {
+  value: number;
+  possibleValue: number;
+  taken: boolean;
+}
 
-  onePair: number;
-  twoPairs: number;
-  threeSame: number;
-  fourSame: number;
-  smallStraight: number;
-  bigStaight: number;
-  kak: number;
-  chance: number;
-  yatzy: number;
+export class AppStateModel {
+  spots: Spot[];
 
   dice: Dice[];
 
   numberOfThrowsLeft: number;
+  showingPossibleValues: boolean;
 }
 
+export const diceDefaultValues = [
+  {
+    value: null,
+    selected: false,
+  },
+  {
+    value: null,
+    selected: false,
+  },
+  {
+    value: null,
+    selected: false,
+  },
+  {
+    value: null,
+    selected: false,
+  },
+  {
+    value: null,
+    selected: false,
+  },
+];
+
 export const defaults: AppStateModel = {
-  ones: null,
-  twos: null,
-  threes: null,
-  fours: null,
-  fives: null,
-  sixes: null,
+  spots: Array.from({ length: 16 }, x => ({
+    value: null,
+    possibleValue: null,
+    taken: false,
+  })),
 
-  onePair: null,
-  twoPairs: null,
-  threeSame: null,
-  fourSame: null,
-  smallStraight: null,
-  bigStaight: null,
-  kak: null,
-  chance: null,
-  yatzy: null,
-
-  dice: [
-    {
-      value: null,
-      selected: false,
-    },
-    {
-      value: null,
-      selected: false,
-    },
-    {
-      value: null,
-      selected: false,
-    },
-    {
-      value: null,
-      selected: false,
-    },
-    {
-      value: null,
-      selected: false,
-    },
-  ],
+  dice: diceDefaultValues,
 
   numberOfThrowsLeft: 3,
+  showingPossibleValues: false,
 };

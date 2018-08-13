@@ -3,6 +3,7 @@ import { Select, Store } from '@ngxs/store';
 import { IAppState } from '../appState';
 import { ThrowDice, ToggleDiceSelection } from '../store/app.actions';
 import { Dice } from '../store/app.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dice',
@@ -11,10 +12,10 @@ import { Dice } from '../store/app.model';
 })
 export class DiceComponent implements OnInit {
   @Select((state: IAppState) => state.app.dice)
-  dice$: Dice[];
+  dice$: Observable<Dice[]>;
 
   @Select((state: IAppState) => state.app.numberOfThrowsLeft)
-  numberOfThrowsLeft$: number;
+  numberOfThrowsLeft$: Observable<number>;
 
   constructor(private store: Store) {}
 

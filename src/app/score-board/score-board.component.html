@@ -1,0 +1,94 @@
+<table class="table table-sm table-bordered" style="width: 200px" *ngIf="spots$ | async as spots; ">
+  <thead>
+    <tr>
+      <td></td>
+      <td>Spelare</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ettor</td>
+      <td>
+        <app-spot [spot]="spots[0]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(0)"></app-spot>
+      </td>
+    </tr>
+    <tr>
+      <td>Tvåor</td>
+      <td>
+        <app-spot [spot]="spots[1]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(1)"></app-spot>
+      </td>
+    </tr>
+    <tr>
+      <td>Treor</td>
+      <td>
+        <app-spot [spot]="spots[2]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(2)"></app-spot>
+      </td>
+    </tr>
+    <tr>
+      <td>Fyror</td>
+      <td>
+        <app-spot [spot]="spots[3]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(3)"></app-spot>
+      </td>
+    </tr>
+    <tr>
+      <td>Femmor</td>
+      <td>
+        <app-spot [spot]="spots[4]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(4)"></app-spot>
+      </td>
+    </tr>
+    <tr>
+      <td>Sexor</td>
+      <td>
+        <app-spot [spot]="spots[5]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(5)"></app-spot>
+      </td>
+    </tr>
+    <tr>
+      <td>Bonus</td>
+      <td>{{bonus$ | async}}</td>
+    </tr>
+    <tr>
+      <td>Summa</td>
+      <td>{{upperSum$ | async}}</td>
+    </tr>
+    <tr>
+      <td>Ett par</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Två par</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tretal</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Fyrtal</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Liten stege</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Stor stege</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Kåk</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Chans</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Yatzy</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Summa</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

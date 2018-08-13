@@ -83,3 +83,8 @@ export class ToggleDiceSelection {
 export class ThrowDice {
   static readonly type = '[App] Throw Dice';
 }
+
+export class SelectSpot {
+  static readonly type = '[App] Select Spot';
+  constructor(public spotIndex: number) {}
+}
