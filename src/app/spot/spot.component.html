@@ -1,9 +1,0 @@
-<div style="height: 32px;">
-  <span *ngIf="spot.taken">
-    {{spot.value === 0 ? '-' : spot.value}}
-  </span>
-
-  <button *ngIf="showingPossibleValues && !spot.taken" (click)="_select()" class="btn btn-sm btn-primary w-100">
-    Välj <span class="ml-1 badge badge-pill badge-light">{{spot.possibleValue}}</span>
-  </button>
-</div>
