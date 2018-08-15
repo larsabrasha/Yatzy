@@ -1,6 +1,6 @@
 <div style="height: 32px;">
   <span *ngIf="spot.taken">
-    {{spot.possibleValue === 0 ? '-' : spot.possibleValue}}
+    {{spot.value === 0 ? '-' : spot.value}}
   </span>
 
   <button *ngIf="showingPossibleValues && !spot.taken" (click)="_select()" class="btn btn-sm w-100" [ngClass]="{'btn-primary':spot.possibleValue > 0, 'btn-secondary':spot.possibleValue === 0}">
