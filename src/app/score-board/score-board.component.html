@@ -1,94 +1,112 @@
-<table class="table table-sm table-bordered" style="width: 200px" *ngIf="spots$ | async as spots; ">
+<table class="table table-sm table-borderless" style="width: 200px" *ngIf="spots$ | async as spots; ">
   <thead>
     <tr>
       <td></td>
-      <td>Spelare</td>
+      <td class="text-center">Spelare 1</td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Ettor</td>
-      <td>
+      <td class="text-center">
         <app-spot [spot]="spots[0]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(0)"></app-spot>
       </td>
     </tr>
     <tr>
       <td>Tvåor</td>
-      <td>
+      <td class="text-center">
         <app-spot [spot]="spots[1]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(1)"></app-spot>
       </td>
     </tr>
     <tr>
       <td>Treor</td>
-      <td>
+      <td class="text-center">
         <app-spot [spot]="spots[2]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(2)"></app-spot>
       </td>
     </tr>
     <tr>
       <td>Fyror</td>
-      <td>
+      <td class="text-center">
         <app-spot [spot]="spots[3]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(3)"></app-spot>
       </td>
     </tr>
     <tr>
       <td>Femmor</td>
-      <td>
+      <td class="text-center">
         <app-spot [spot]="spots[4]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(4)"></app-spot>
       </td>
     </tr>
     <tr>
       <td>Sexor</td>
-      <td>
+      <td class="text-center">
         <app-spot [spot]="spots[5]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(5)"></app-spot>
       </td>
     </tr>
-    <tr>
+    <tr class="bg-secondary text-light">
       <td>Bonus</td>
-      <td>{{bonus$ | async}}</td>
+      <td class="text-center">{{bonus$ | async}}</td>
     </tr>
-    <tr>
+    <tr class="bg-dark text-light">
       <td>Summa</td>
-      <td>{{upperSum$ | async}}</td>
+      <td class="text-center">{{upperSum$ | async}}</td>
     </tr>
     <tr>
       <td>Ett par</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[6]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(6)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Två par</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[7]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(7)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Tretal</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[8]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(8)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Fyrtal</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[9]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(9)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Liten stege</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[10]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(10)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Stor stege</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[11]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(11)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Kåk</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[12]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(12)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Chans</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[13]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(13)"></app-spot>
+      </td>
     </tr>
     <tr>
       <td>Yatzy</td>
-      <td></td>
+      <td class="text-center">
+        <app-spot [spot]="spots[14]" [showingPossibleValues]="showingPossibleValues$ | async" (select)="selectSpot(14)"></app-spot>
+      </td>
     </tr>
-    <tr>
+    <tr class="bg-dark text-light">
       <td>Summa</td>
-      <td></td>
+      <td class="text-center">{{totalSum$ | async}}</td>
     </tr>
   </tbody>
 </table>

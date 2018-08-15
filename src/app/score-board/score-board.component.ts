@@ -24,6 +24,9 @@ export class ScoreBoardComponent implements OnInit {
   @Select(AppState.upperSum)
   upperSum$: Observable<number>;
 
+  @Select(AppState.totalSum)
+  totalSum$: Observable<number>;
+
   constructor(private store: Store) {}
 
   ngOnInit() {}
