@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-github-pages": "ng build --prod --base-href https://larsabrasha.github.io/Yatzy/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
