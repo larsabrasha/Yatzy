@@ -1,11 +1,17 @@
-import { Action, State, StateContext, Selector } from '@ngxs/store';
-import { ThrowDice, ToggleDiceSelection, SelectSpot } from './app.actions';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
+import {
+  DismissModal,
+  SelectSpot,
+  ShowToplist,
+  ThrowDice,
+  ToggleDiceSelection,
+} from './app.actions';
 import {
   AppStateModel,
   defaults,
   Dice,
-  Spot,
   diceDefaultValues,
+  Spot,
 } from './app.model';
 
 @State<AppStateModel>({
@@ -51,6 +57,25 @@ export class AppState {
     return (
       AppState.sum1(state) + AppState.bonusValue(state) + AppState.sum2(state)
     );
+  }
+
+  @Selector()
+  static showingModal(state: AppStateModel) {
+    return state.showingToplist;
+  }
+
+  @Action(ShowToplist)
+  showToplist(context: StateContext<AppStateModel>) {
+    context.patchState({
+      showingToplist: true,
+    });
+  }
+
+  @Action(DismissModal)
+  dismissModal(context: StateContext<AppStateModel>) {
+    context.patchState({
+      showingToplist: false,
+    });
   }
 
   @Action(ThrowDice)

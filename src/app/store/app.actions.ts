@@ -1,5 +1,13 @@
 import { Dice } from './app.model';
 
+export class ShowToplist {
+  static readonly type = '[App] Show Tpplist';
+}
+
+export class DismissModal {
+  static readonly type = '[App] Dismiss Modal';
+}
+
 export class SelectOnes {
   static readonly type = '[App] Select Ones';
   constructor(public payload: number) {}

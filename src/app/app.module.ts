@@ -4,12 +4,14 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
 import { AppComponent } from './app.component';
 import { AppState } from './store/app.state';
-import { environment } from '../environments/environment.prod';
+import { environment } from '../environments/environment';
 import { DiceComponent } from './dice/dice.component';
 import { SingleDiceComponent } from './single-dice/single-dice.component';
 import { ScoreBoardComponent } from './score-board/score-board.component';
 
 import { SpotComponent } from './spot/spot.component';
+import { ModalComponent } from './shared/modal/modal.component';
+import { ToplistComponent } from './toplist/toplist.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { SpotComponent } from './spot/spot.component';
     SingleDiceComponent,
     ScoreBoardComponent,
     SpotComponent,
+    ModalComponent,
+    ToplistComponent,
   ],
   imports: [
     BrowserModule,

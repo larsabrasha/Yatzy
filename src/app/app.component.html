@@ -1,5 +1,8 @@
 <div class="container">
 
-    <app-dice></app-dice>
-    <app-score-board></app-score-board>
+  <app-dice></app-dice>
+  <app-score-board></app-score-board>
+
+  <button type="button" class="btn btn-light" (click)="showToplist()">Topplistan</button>
+  <app-toplist *ngIf="showingToplist$ | async" (dismiss)="dismissModal()"></app-toplist>
 </div>

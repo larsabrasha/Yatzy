@@ -10,6 +10,8 @@ export class Spot {
 }
 
 export class AppStateModel {
+  showingToplist: boolean;
+
   spots: Spot[];
 
   dice: Dice[];
@@ -42,6 +44,7 @@ export const diceDefaultValues = [
 ];
 
 export const defaults: AppStateModel = {
+  showingToplist: false,
   spots: Array.from({ length: 16 }, x => ({
     value: null,
     possibleValue: null,
